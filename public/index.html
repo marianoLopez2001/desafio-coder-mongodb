@@ -15,7 +15,6 @@
   <form class="d-flex flex-column text-center w-50 m-auto bg-light p-3 rounded" onsubmit="return addMessage(this)">
     <input required placeholder="Nombre" class="rounded p-1 m-1" type="text" id="nombre">
     <input required placeholder="Precio" class="rounded p-1 m-1" type="text" id="precio">
-    <input required placeholder="Imagen" class="rounded p-1 m-1" type="text" id="imagen">
     <input class="btn btn-primary" type="submit" value="Enviar">
   </form>
 
@@ -24,6 +23,7 @@
 
   <h2 class="text-center m-4">Chat</h2>
   <form class="d-flex flex-column text-center w-50 m-auto bg-light p-3 rounded" onsubmit="return handleChat(this)">
+    <input required class="rounded p-1 m-1" placeholder="Nombre" id="nombre" type="text">
     <input required class="rounded p-1 m-1" placeholder="Mail" id="mail" type="mail">
     <input required class="rounded p-1 m-1" placeholder="Mensaje" id="mensaje" type="text">
     <input class="btn btn-primary" type="submit" value="Enviar">

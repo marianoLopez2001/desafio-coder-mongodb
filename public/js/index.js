@@ -3,9 +3,7 @@ const socket = io.connect()
 function addMessage() {
     const nombre = document.getElementById("nombre").value
     const precio = document.getElementById("precio").value
-    const imagen = document.getElementById("imagen").value
-
-    const producto = { nombre, precio, imagen }
+    const producto = { nombre, precio }
     socket.emit("newProducto", producto)
     return false
 }
@@ -13,7 +11,8 @@ function addMessage() {
 function handleChat() {
     const mail = document.getElementById("mail").value
     const contenidoMensaje = document.getElementById("mensaje").value
-    const mensaje = { mensaje: contenidoMensaje, mail: mail, fecha: new Date().toLocaleString() }
+    const nombre = document.getElementById("nombre").value
+    const mensaje = { nombre: nombre, mail: mail, mensaje: contenidoMensaje}
     socket.emit("newMensaje", mensaje)
     return false
 }
@@ -21,7 +20,7 @@ function handleChat() {
 function render(data) {
     const html = data.map(i => {
         return (
-            `<p>Nombre: ${i.nombre}, Precio: ${i.precio}, Imagen: <img width="120" src=${i.imagen}></p>`
+            `<p>Nombre: ${i.nombre}, Precio: ${i.precio}</p>`
         )
     })
     document.getElementById("productos").innerHTML = html
@@ -31,7 +30,7 @@ function render(data) {
 function renderChat(data) {
     const html = data.map(i => {
         return (
-            `<p><span class="fst-italic text-primary">Mail: ${i.mail}</span>, <span class="text-warning">Fecha: ${i.fecha}</span>, <span style="word-wrap: break-word;" class="text-success fst-italic">Mensaje: ${i.mensaje}</span></p>`
+            `<p><span class="fst-italic text-danger">Nombre: ${i.nombre}</span>, <span class="fst-italic text-primary">Mail: ${i.mail}</span>, <span style="word-wrap: break-word;" class="text-success fst-italic">Mensaje: ${i.mensaje}</span></p>`
         )
     })
     document.getElementById("mensaje").value = ""
