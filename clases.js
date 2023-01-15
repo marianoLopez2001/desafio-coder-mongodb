@@ -1,4 +1,6 @@
 import knex from 'knex'
+import mongoose from "mongoose";
+import { mongodbOptions } from "./options.js";
 
 export class DBProductosSQL {
     constructor(options, tableName) {
@@ -18,7 +20,7 @@ export class DBProductosSQL {
             .finally(() => { knexConnection.destroy() })
     }
 
-    pushData(data) { //faltaría que la info venga del front capaz
+    pushData(data) {
         const knexConnection = knex(this.options);
         knexConnection(this.tableName).insert(data)
             .then(() => { console.log('info insertada') })
@@ -29,7 +31,7 @@ export class DBProductosSQL {
     async getAll() {
         const knexConnection = knex(this.options);
         const data = knexConnection.from(this.tableName).select('*')
-            return data.then((rows) => { return rows })
+        return data.then((rows) => { return rows })
             .catch((err) => { console.log(err); })
             .finally(() => { knexConnection.destroy() })
     }
@@ -76,9 +78,11 @@ export class DBMensajesSqlite3 {
         knexConnection.schema.createTable(this.tableName, table => {
             table.increments('id').primary()
             table.string('nombre'),
-                table.string('mail')
-            table.string('mensaje')
-
+                table.string('apellido'),
+                table.integer('edad'),
+                table.string('alias'),
+                table.string('avatar'),
+                table.string('text')
         })
             .then(() => { console.log('tabla creada'); })
             .catch((err) => { console.log(err); })
@@ -96,10 +100,7 @@ export class DBMensajesSqlite3 {
     async getAll() {
         const knexConnection = knex(this.options);
         const data = knexConnection.from(this.tableName).select('*')
-            return data.then((rows) => { return rows })
-            // .then(() => { console.log("exito"); })
-            // .catch((err) => { console.log(err); })
-            // .finally(() => { knexConnection.destroy() })
+        return data.then((rows) => { return rows })
     }
 
     getById(id) {
@@ -131,4 +132,69 @@ export class DBMensajesSqlite3 {
             .finally(() => { knexConnection.destroy() })
     }
 }
+
+
+let connect
+
+export class ContenedorMongoMensajes {
+    constructor(nombreColeccion, esquema) {
+        this.schema = new mongoose.Schema(esquema)
+        this.coleccion = mongoose.model(nombreColeccion, this.schema) // crea la coleccion de una
+    }
+
+    async connectMongo() {
+        try {
+            mongoose.connect(mongodbOptions.cnstr, {
+                useNewUrlParser: true,
+                useUnifiedTopology: true
+            })
+            connect = mongoose.connection;
+            console.log('mongo ok');
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    async insert(data) {
+        try {
+            await connect.collection(this.coleccion.collection.name).insertOne(data)
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    async listAll() {
+        try {
+            const read = await this.coleccion.find({})
+            return read
+        } catch (error) {
+            console.log(error);
+        }
+    }
+    async listById(id) {
+        try {
+            const read = await this.coleccion.find({ _id: id })
+            console.log(read);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    async updateById(id) {
+        try {
+            await this.coleccion.updateOne({ _id: id }, { title: "pepe" });
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    async deleteById(id) {
+        try {
+            await this.coleccion.deleteOne({ _id: id })
+        } catch (error) {
+            console.log(error);
+        }
+    }
+}
+
 
