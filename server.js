@@ -53,9 +53,7 @@ io.on("connection", async socket => {
         comments: [commentSchema]
     })
     const normalizedData = normalize(dataDenormalizada, postSchema) //DATA NORMALIZADA
-    console.log(dataDenormalizada);
     socket.emit('mensajes', dataDenormalizada)
-    console.log(JSON.stringify(normalizedData));
 
     //DATA "DENORMALIZADA"
     const denormalizedData = denormalize(normalizedData.result, postSchema, normalizedData.entities);
@@ -70,7 +68,7 @@ io.on("connection", async socket => {
             dataDenormalizada.comments.push({ id: i.author.mail, text: i.text, author: i.author.nombre })
         })
         dataDB.map(i => {
-            dataDenormalizada.author.wpush({ ...i.author, id: i.author.mail })
+            dataDenormalizada.author.push({ ...i.author, id: i.author.mail })
         })
         io.sockets.emit("arrayMensajes", { dataDenormalizada })
     })

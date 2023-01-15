@@ -95,9 +95,7 @@ io.on("connection", function _callee2(socket) {
           });
           normalizedData = (0, _normalizr.normalize)(dataDenormalizada, postSchema); //DATA NORMALIZADA
 
-          console.log(dataDenormalizada);
-          socket.emit('mensajes', dataDenormalizada);
-          console.log(JSON.stringify(normalizedData)); //DATA "DENORMALIZADA"
+          socket.emit('mensajes', dataDenormalizada); //DATA "DENORMALIZADA"
 
           denormalizedData = (0, _normalizr.denormalize)(normalizedData.result, postSchema, normalizedData.entities); //Aca me tira un [Symbol(id)] y no me deja acceder al objeto
 
@@ -130,7 +128,7 @@ io.on("connection", function _callee2(socket) {
                       });
                     });
                     dataDB.map(function (i) {
-                      dataDenormalizada.author.wpush(_objectSpread({}, i.author, {
+                      dataDenormalizada.author.push(_objectSpread({}, i.author, {
                         id: i.author.mail
                       }));
                     });
@@ -146,7 +144,7 @@ io.on("connection", function _callee2(socket) {
             });
           });
 
-        case 22:
+        case 20:
         case "end":
           return _context2.stop();
       }
