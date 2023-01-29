@@ -79,24 +79,100 @@
 //     console.log("server ok");
 // })
 
-const express = require('express')
-const session = require('express-session')
-const mongoStore = require('connect-mongo')
+import express from 'express'
+import session from 'express-session'
+import passport from 'passport'
+import bcrypt from "bcrypt"
+import { Strategy } from 'passport-local'
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
+import mongoose from "mongoose";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+const LocalStrategy = Strategy
 const app = express()
 
 const PORT = 8080
+const cnxstr = 'mongodb://localhost:27017/users'
+let userGlobalEmail = ''
+let logged = false
+
+const generateHash = async (passwordUser) => {
+    const hashPassword = await bcrypt.hash(passwordUser, 10);
+    return hashPassword
+}
+
+const verifyPass = async (user, passwordUser) => {
+    const match = await bcrypt.compare(passwordUser, user.password)
+    return match
+}
+
+try {
+    mongoose.connect(cnxstr, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+    })
+    console.log('mongo ok')
+} catch (err) {
+    console.log(err);
+}
+
+const colection = 'users'
+const userSchema = new mongoose.Schema(
+    {
+        email: String,
+        password: String
+    }
+)
+const users = mongoose.model(colection, userSchema);
+
+passport.use(new LocalStrategy(
+    async function (username, password, done) {
+        const existeUsuario = await users.findOne({ email: username }).lean();
+
+        if (!existeUsuario) {
+            return done(null, false);
+        } else {
+            const match = await verifyPass(existeUsuario, password)
+            if (!match) {
+                return done(null, false)
+            }
+            userGlobalEmail = existeUsuario.email
+            return done(null, existeUsuario);
+        }
+    }
+));
+
+passport.serializeUser((usuario, done) => {
+    done(null, usuario.email);
+});
+
+passport.deserializeUser((emailUser, done) => {
+    const existeUsuario = users.findOne({ email: emailUser }).lean();
+    done(null, existeUsuario);
+});
+
+function isAuth(req, res, next) {
+    if (req.isAuthenticated()) {
+        logged = true
+        next()
+    } else {
+        res.redirect('/login')
+    }
+}
 
 app.use(session({
-    store: mongoStore.create({
-        mongoUrl: 'mongodb://localhost/sessions',
-    }),
     secret: 'secret',
     resave: false,
     saveUninitialized: false,
     cookie: {
-        expires: 60000
+        expires: 600000 //10 min
     }
 }))
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use(express.static(__dirname + '/public'))
 app.set('views', './views')
@@ -104,35 +180,51 @@ app.set('view engine', 'ejs')
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 
-let nombreUsuario
-let logout //VARIABLE GLOBAL PARA HACER LA LOGICA DEL RENDERIZADO CON EJS
-
-app.get('/', (req, res) => {
-    if (nombreUsuario) {
-        req.session.counter += 1
-    }
-    res.render('index.ejs', { nombreUsuario: nombreUsuario, counter: req.session.counter, logout: logout })
-    if (logout === true) {
-        nombreUsuario = ''
-    }
-    logout = false
+app.get('/', isAuth, (req, res) => {
+    res.render("inicio.ejs", { email: userGlobalEmail, logged: logged })
 })
 
-app.post('/formPost', (req, res) => {
-    nombreUsuario = req.body.nombre
-    req.session.counter = 0
-    res.redirect('/')
+app.get('/register', (req, res) => {
+    res.render('register.ejs', {logged: logged})
 })
+
+app.get('/loginError', (req, res) => {
+    res.render('loginError.ejs', {logged: logged})
+})
+
+app.get('/registerError', (req, res) => {
+    res.render('registerError.ejs', {logged: logged})
+})
+
+app.get('/login', (req, res) => {
+    res.render('login.ejs', {logged: logged})
+})
+
+app.post('/formRegister', async (req, res) => {
+    const { emailUser, passwordUser } = req.body
+    const encriptedPassword = await generateHash(passwordUser)
+    const existeUsuario = await users.findOne({ email: emailUser }).lean();
+    if (existeUsuario) {
+        res.redirect('/registerError')
+    } else {
+        const newUsuario = { email: emailUser, password: encriptedPassword }
+        await users.create(newUsuario)
+        res.redirect('/login')
+    }
+})
+
+app.post('/formLogin', passport.authenticate('local', { successRedirect: '/', failureRedirect: '/loginError' }))
 
 app.get('/logout', (req, res) => {
-    req.session.destroy(err => {
+    req.logOut(err => {
         if (err) {
-            console.log(err)
+            console.log(err);
         } else {
-            res.redirect('/')
-            logout = true
+            userGlobalEmail = ''
+            logged = false
+            res.redirect('/');
         }
-    })
+    });
 })
 
 app.listen(PORT, console.log("server ok"))

@@ -1,5 +1,17 @@
 "use strict";
 
+var _express = _interopRequireDefault(require("express"));
+
+var _expressSession = _interopRequireDefault(require("express-session"));
+
+var _connectMongo = _interopRequireDefault(require("connect-mongo"));
+
+var _passport = _interopRequireDefault(require("passport"));
+
+var _passportLocal = require("passport-local");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
 // import express from 'express'
 // import { Server as HttpServer } from "http"
 // import { Server as IOServer } from "socket.io"
@@ -63,16 +75,24 @@
 // httpServer.listen(PORT, () => {
 //     console.log("server ok");
 // })
-var express = require('express');
-
-var session = require('express-session');
-
-var mongoStore = require('connect-mongo');
-
-var app = express();
+var LocalStrategy = _passportLocal.Strategy;
+var app = (0, _express["default"])();
 var PORT = 8080;
-app.use(session({
-  store: mongoStore.create({
+
+_passport["default"].use(new LocalStrategy(function _callee() {
+  return regeneratorRuntime.async(function _callee$(_context) {
+    while (1) {
+      switch (_context.prev = _context.next) {
+        case 0:
+        case "end":
+          return _context.stop();
+      }
+    }
+  });
+}));
+
+app.use((0, _expressSession["default"])({
+  store: _connectMongo["default"].create({
     mongoUrl: 'mongodb://localhost/sessions'
   }),
   secret: 'secret',
@@ -82,11 +102,11 @@ app.use(session({
     expires: 60000
   }
 }));
-app.use(express["static"](__dirname + '/public'));
+app.use(_express["default"]["static"](__dirname + '/public'));
 app.set('views', './views');
 app.set('view engine', 'ejs');
-app.use(express.json());
-app.use(express.urlencoded({
+app.use(_express["default"].json());
+app.use(_express["default"].urlencoded({
   extended: true
 }));
 var nombreUsuario;
