@@ -79,7 +79,7 @@
 //     console.log("server ok");
 // })
 
-import express from 'express'
+import express, { json } from 'express'
 import session from 'express-session'
 import passport from 'passport'
 import bcrypt from "bcrypt"
@@ -89,6 +89,7 @@ import { fileURLToPath } from 'url';
 import mongoose from "mongoose";
 import dotenv from 'dotenv'
 import minimist from 'minimist'
+import fs from 'fs'
 
 dotenv.config()
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -98,12 +99,11 @@ const app = express()
 
 const PORT = minimist(process.argv)._.slice(2)[0] || 8080
 
-const cnxstr = process.env.cnxstr;
+const credencialesRead = JSON.parse(fs.readFileSync('.env', 'utf-8'))
+const cnxstr = 'mongodb://localhost:27017/users'
+const secret = credencialesRead.secret
 let userGlobalEmail = ''
 let logged = false
-
-let credenciales = []
-let envCredenciales = process.env.CREDENCIALES = credenciales
 
 const generateHash = async (passwordUser) => {
     const hashPassword = await bcrypt.hash(passwordUser, 10);
@@ -136,7 +136,7 @@ const verifyPass = async (user, passwordUser) => {
 
 passport.use(new LocalStrategy(
     async function (username, password, done) {
-        const existeUsuario = envCredenciales.find(i => i.email === username)
+        const existeUsuario = credencialesRead.credenciales.find(i => i.email === username)
 
         if (!existeUsuario) {
             return done(null, false);
@@ -156,7 +156,7 @@ passport.serializeUser((usuario, done) => {
 });
 
 passport.deserializeUser((emailUser, done) => {
-    const existeUsuario = envCredenciales.find(i => i.email === emailUser);
+    const existeUsuario = credencialesRead.credenciales.find(i => i.email === emailUser);
     done(null, existeUsuario);
 });
 
@@ -170,7 +170,7 @@ function isAuth(req, res, next) {
 }
 
 app.use(session({
-    secret: process.env.SECRET_KEY,
+    secret: secret,
     resave: false,
     saveUninitialized: false,
     cookie: {
@@ -210,13 +210,13 @@ app.get('/login', (req, res) => {
 app.post('/formRegister', async (req, res) => {
     const { emailUser, passwordUser } = req.body
     const encriptedPassword = await generateHash(passwordUser)
-    const existeUsuario = envCredenciales.find(i => i.email === emailUser);
+    const existeUsuario = credencialesRead.credenciales.find(i => i.email === emailUser);
     if (existeUsuario) {
         res.redirect('/registerError')
     } else {
         const newUsuario = { email: emailUser, password: encriptedPassword }
-        credenciales.push(newUsuario)
-        process.env.CREDENCIALES = credenciales
+        credencialesRead.credenciales.push(newUsuario)
+        fs.writeFileSync('.env', JSON.stringify(credencialesRead))
         res.redirect('/login')
     }
 })
