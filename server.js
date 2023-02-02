@@ -115,25 +115,6 @@ const verifyPass = async (user, passwordUser) => {
     return match
 }
 
-// try {
-//     mongoose.connect(cnxstr, {
-//         useNewUrlParser: true,
-//         useUnifiedTopology: true
-//     })
-//     console.log('mongo ok')
-// } catch (err) {
-//     console.log(err);
-// }
-
-// const colection = 'users'
-// const userSchema = new mongoose.Schema(
-//     {
-//         email: String,
-//         password: String
-//     }
-// )
-// const users = mongoose.model(colection, userSchema);
-
 passport.use(new LocalStrategy(
     async function (username, password, done) {
         const existeUsuario = credencialesRead.credenciales.find(i => i.email === username)
@@ -205,6 +186,17 @@ app.get('/registerError', (req, res) => {
 
 app.get('/login', (req, res) => {
     res.render('login.ejs', { logged: logged })
+})
+
+app.get('/info', (req, res) => {
+    let argumentosEntrada = minimist(process.argv)._.length !== 2 ? minimist(process.argv)._.slice(2) : 'No hay argumentos de entrada';
+    let OS = process.platform
+    let nodeVersion = process.version
+    let rrs = process.memoryUsage()
+    let pathAbsolute = process.cwd()
+    let pathEjecucion = minimist(process.argv)._[0]
+    let processId = process.pid
+    res.render('info.ejs', { logged: logged, argumentosEntrada: argumentosEntrada, OS: OS, nodeVersion: nodeVersion, rrs: rrs, pathAbsolute: pathAbsolute, pathEjecucion: pathEjecucion, processId: processId })
 })
 
 app.post('/formRegister', async (req, res) => {
