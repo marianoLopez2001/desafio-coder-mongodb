@@ -87,16 +87,23 @@ import { Strategy } from 'passport-local'
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 import mongoose from "mongoose";
+import dotenv from 'dotenv'
+import minimist from 'minimist'
 
+dotenv.config()
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const LocalStrategy = Strategy
 const app = express()
 
-const PORT = 8080
-const cnxstr = 'mongodb://localhost:27017/users'
+const PORT = minimist(process.argv)._.slice(2)[0] || 8080
+
+const cnxstr = process.env.cnxstr;
 let userGlobalEmail = ''
 let logged = false
+
+let credenciales = []
+let envCredenciales = process.env.CREDENCIALES = credenciales
 
 const generateHash = async (passwordUser) => {
     const hashPassword = await bcrypt.hash(passwordUser, 10);
@@ -108,28 +115,28 @@ const verifyPass = async (user, passwordUser) => {
     return match
 }
 
-try {
-    mongoose.connect(cnxstr, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true
-    })
-    console.log('mongo ok')
-} catch (err) {
-    console.log(err);
-}
+// try {
+//     mongoose.connect(cnxstr, {
+//         useNewUrlParser: true,
+//         useUnifiedTopology: true
+//     })
+//     console.log('mongo ok')
+// } catch (err) {
+//     console.log(err);
+// }
 
-const colection = 'users'
-const userSchema = new mongoose.Schema(
-    {
-        email: String,
-        password: String
-    }
-)
-const users = mongoose.model(colection, userSchema);
+// const colection = 'users'
+// const userSchema = new mongoose.Schema(
+//     {
+//         email: String,
+//         password: String
+//     }
+// )
+// const users = mongoose.model(colection, userSchema);
 
 passport.use(new LocalStrategy(
     async function (username, password, done) {
-        const existeUsuario = await users.findOne({ email: username }).lean();
+        const existeUsuario = envCredenciales.find(i => i.email === username)
 
         if (!existeUsuario) {
             return done(null, false);
@@ -149,7 +156,7 @@ passport.serializeUser((usuario, done) => {
 });
 
 passport.deserializeUser((emailUser, done) => {
-    const existeUsuario = users.findOne({ email: emailUser }).lean();
+    const existeUsuario = envCredenciales.find(i => i.email === emailUser);
     done(null, existeUsuario);
 });
 
@@ -163,7 +170,7 @@ function isAuth(req, res, next) {
 }
 
 app.use(session({
-    secret: 'secret',
+    secret: process.env.SECRET_KEY,
     resave: false,
     saveUninitialized: false,
     cookie: {
@@ -185,30 +192,31 @@ app.get('/', isAuth, (req, res) => {
 })
 
 app.get('/register', (req, res) => {
-    res.render('register.ejs', {logged: logged})
+    res.render('register.ejs', { logged: logged })
 })
 
 app.get('/loginError', (req, res) => {
-    res.render('loginError.ejs', {logged: logged})
+    res.render('loginError.ejs', { logged: logged })
 })
 
 app.get('/registerError', (req, res) => {
-    res.render('registerError.ejs', {logged: logged})
+    res.render('registerError.ejs', { logged: logged })
 })
 
 app.get('/login', (req, res) => {
-    res.render('login.ejs', {logged: logged})
+    res.render('login.ejs', { logged: logged })
 })
 
 app.post('/formRegister', async (req, res) => {
     const { emailUser, passwordUser } = req.body
     const encriptedPassword = await generateHash(passwordUser)
-    const existeUsuario = await users.findOne({ email: emailUser }).lean();
+    const existeUsuario = envCredenciales.find(i => i.email === emailUser);
     if (existeUsuario) {
         res.redirect('/registerError')
     } else {
         const newUsuario = { email: emailUser, password: encriptedPassword }
-        await users.create(newUsuario)
+        credenciales.push(newUsuario)
+        process.env.CREDENCIALES = credenciales
         res.redirect('/login')
     }
 })
