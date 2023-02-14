@@ -33,7 +33,6 @@ function handleChat() {
 
 function renderChat(data) {
     const newData = [];
-    console.log(data);
     if (data.dataDenormalizada) {
         data.dataDenormalizada.comments.map((i) => {
             newData.push(`<p>Mensaje: ${i.text}</p><br>`)

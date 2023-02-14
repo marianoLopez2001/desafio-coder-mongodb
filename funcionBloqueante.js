@@ -10,7 +10,6 @@ process.on('message', cantidad => {
             cantRepeticiones: cantRepeticiones,
         })
     }
-    console.log('mensaje desde el proceso principal:\n');
 
     process.send(`resultado de suma en segundo plano ${JSON.stringify(numerosGenerados)}`)
 });
