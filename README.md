@@ -1,16 +1,3 @@
-## FORK Y CLUSTER CON NODE
+## no entendi la consigna de errores lanzados por las apis de mensajes y productos, cree el appender por si acaso pero no llegue a entender donde se pone.
 
-### node server.js 8080 CLUSTER
-### node server.js 8080 CLUSTER
-
-## FORK Y CLUSTER CON PM2
-
-### cd /proyecto
-### pm2 start server.js --name='servercluster' --watch -i max -- 8080
-### pm2 start server.js --name='serverfork' --watch -- 8080
-### pm2 list
-
-# FOREVER
-
-### forever start server.js 8080 CLUSTER
-### forever list
+# artillery quick --count 50 -n 20 http://localhost:8080/info > result_forkinfo.artillery.txt

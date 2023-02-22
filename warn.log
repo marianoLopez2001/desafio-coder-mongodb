@@ -1,0 +1,1153 @@
+[2023-02-22T20:00:59.499] [WARN] fileWarnConsole - { methodo: 'GET', endpoint: '/asd23' }
+[2023-02-22T20:01:05.276] [WARN] fileWarnConsole - { methodo: 'GET', endpoint: '/asd23' }
+[2023-02-22T20:01:05.431] [WARN] fileWarnConsole - { methodo: 'GET', endpoint: '/asd23' }
+[2023-02-22T20:22:56.660] [WARN] fileWarnConsole - { methodo: 'GET', endpoint: '/randoms' }
+[2023-02-22T20:22:59.825] [WARN] fileWarnConsole - { methodo: 'GET', endpoint: '/randoms' }
+[2023-02-22T20:23:11.936] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/randoms' }
+[2023-02-22T20:23:13.433] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/randoms' }
+[2023-02-22T20:23:13.957] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/randoms' }
+[2023-02-22T20:25:42.043] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:39:20.375] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:39:20.381] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  55951360,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:40:29.640] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:40:29.642] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  47972352,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:40:30.180] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:40:30.181] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  48373760,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:20.926] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:20.927] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  48668672,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:20.931] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:20.932] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  48955392,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:20.938] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:20.939] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  48570368,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:20.960] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:20.961] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  48201728,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:20.968] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:20.969] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  48660480,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:20.981] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:20.983] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  48197632,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:20.989] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:20.990] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  48558080,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:20.997] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:20.998] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  49041408,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:21.004] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:21.005] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  49045504,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:21.011] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:21.011] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  48750592,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:21.018] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:21.019] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  49000448,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:21.023] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:21.024] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  49221632,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:21.032] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:21.033] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  49459200,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:21.037] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:21.038] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  48975872,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:21.044] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:21.045] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  48898048,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:21.049] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:21.050] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  49319936,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:21.057] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:21.058] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  49577984,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:21.062] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:21.063] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  49037312,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:21.091] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:21.092] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  49291264,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:21.101] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:21.102] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  49512448,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:21.107] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:21.108] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  49115136,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:21.111] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:21.112] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  49557504,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:21.129] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:21.130] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  49405952,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:21.139] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:21.140] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  49831936,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:21.157] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:21.158] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  49315840,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:21.176] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:21.177] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  49545216,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:21.197] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:21.197] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  49758208,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:21.216] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:21.217] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  49975296,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:21.237] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:21.237] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  49516544,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:21.257] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:21.257] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  49917952,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:21.277] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:21.277] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  50327552,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:21.297] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:21.298] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  50536448,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:21.317] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:21.318] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  50073600,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:21.336] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:21.337] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  50286592,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:21.356] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:21.357] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  50499584,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:21.377] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:21.377] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  50708480,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:21.397] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:21.397] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  50278400,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:21.417] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:21.417] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  50491392,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:21.438] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:21.439] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  50704384,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:21.456] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:21.457] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  50921472,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:21.477] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:21.478] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  50405376,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:21.496] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:21.497] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  50614272,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:21.516] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:21.517] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  50827264,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:21.538] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:21.539] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  51040256,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:21.559] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:21.559] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  51580928,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:21.577] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:21.577] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  51793920,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:21.597] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:21.597] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  52002816,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:21.616] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:21.617] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  52219904,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:21.636] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:21.637] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  52498432,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:42:21.657] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:42:21.657] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  52502528,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:10.969] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:10.970] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  52551680,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:31.702] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:31.703] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  51658752,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:31.707] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:31.708] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  51716096,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:31.724] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:31.725] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  51720192,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:31.735] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:31.736] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  51728384,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:31.755] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:31.756] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  51150848,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:31.776] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:31.777] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  51372032,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:31.795] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:31.796] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  51585024,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:31.815] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:31.816] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  51798016,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:31.835] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:31.836] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  51318784,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:31.855] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:31.856] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  51544064,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:31.877] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:31.878] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  51761152,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:31.896] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:31.897] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  51974144,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:31.915] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:31.916] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  51482624,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:31.935] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:31.936] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  51691520,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:31.955] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:31.956] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  51908608,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:31.975] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:31.976] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  52121600,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:32.009] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:32.010] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  51646464,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:32.021] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:32.022] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  51904512,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:32.035] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:32.036] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  52113408,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:32.055] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:32.055] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  52326400,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:32.078] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:32.080] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  51843072,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:32.096] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:32.097] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  52060160,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:32.114] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:32.115] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  52269056,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:32.134] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:32.135] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  52486144,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:32.154] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:32.155] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  51994624,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:32.176] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:32.177] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  52207616,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:32.195] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:32.196] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  52424704,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:32.215] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:32.216] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  52097024,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:32.235] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:32.235] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  52310016,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:32.254] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:32.255] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  52518912,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:32.275] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:32.275] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  52736000,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:32.295] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:32.296] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  52256768,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:32.315] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:32.315] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  52473856,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:32.335] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:32.335] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  52813824,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:32.354] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:32.355] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  53026816,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:32.375] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:32.377] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  52457472,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:32.394] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:32.395] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  52764672,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:32.414] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:32.415] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  52973568,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:32.434] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:32.435] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  53182464,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:32.454] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:32.456] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  52715520,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:32.476] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:32.476] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  52924416,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:32.496] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:32.497] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  53133312,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:32.515] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:32.515] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  53383168,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:32.535] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:32.535] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  53768192,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:32.554] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:32.555] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  53370880,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:32.575] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:32.575] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  53579776,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:32.594] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:32.595] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  53796864,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:32.631] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:32.631] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  54009856,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:32.639] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:32.640] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  54550528,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
+[2023-02-22T20:43:32.666] [INFO] fileWarnConsole - { methodo: 'GET', endpoint: '/info' }
+[2023-02-22T20:43:32.667] [INFO] fileWarnConsole - [
+  'No hay argumentos de entrada',
+  'win32',
+  8080,
+  'v18.14.0',
+  54808576,
+  'C:\\Users\\Pc2\\Desktop\\Proyectos\\desafio-coder-knex',
+  'C:\\Program Files\\nodejs\\node.exe',
+  1212
+]
