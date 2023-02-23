@@ -8,7 +8,6 @@ import { fileURLToPath } from 'url';
 import dotenv from 'dotenv'
 import minimist from 'minimist'
 import fs from 'fs'
-import { fork } from 'child_process'
 import { Server as IoServer } from 'socket.io'
 import { Server as HTTPServer } from 'http'
 import os from 'os'
@@ -45,12 +44,11 @@ log4js.configure({
     },
     categories: {
         default: { appenders: ['consoleLog'], level: 'trace' },
-
         fileErrorConsole: { appenders: ['fileLogError', 'consoleLog'], level: 'error' },
         fileWarnConsole: { appenders: ['fileLog', 'consoleLog'], level: 'trace' },
     }
 })
-
+let loggerConsole = log4js.getLogger()
 let loggerWarnAndConsole = log4js.getLogger('fileWarnConsole')
 let loggerFileError = log4js.getLogger('fileErrorConsole')
 
@@ -133,7 +131,7 @@ app.use(express.urlencoded({ extended: true }));
 if (MODE === 'CLUSTER') {
     if (cluster.isPrimary) {
 
-        console.log(`master is running in ${process.pid} en ${procesadores} procesadores`);
+        loggerConsole.info(`master is running in ${process.pid} en ${procesadores} procesadores`);
 
         for (let i = 0; i < procesadores; i++) {
             cluster.fork()
@@ -192,7 +190,7 @@ if (MODE === 'CLUSTER') {
         app.get('/logout', (req, res) => {
             req.logOut(err => {
                 if (err) {
-                    console.log(err);
+                    loggerFileError.error(err);
                 } else {
                     userGlobalEmail = ''
                     logged = false
@@ -206,10 +204,10 @@ if (MODE === 'CLUSTER') {
             res.sendStatus(404)
         })
 
-        httpServer.listen(PORT, console.log("server ok en puerto " + PORT + ', PID Worker: ' + process.pid))
+        httpServer.listen(PORT, loggerConsole.info("server ok en puerto " + PORT + ', PID Worker: ' + process.pid))
     }
 } else {
-    console.log('MODO FORK');
+    loggerConsole.info('MODO FORK');
 
     router.get('/randoms', mdwWarn, (req, res) => {
         res.sendFile(__dirname + '/public/array.html')
@@ -263,7 +261,7 @@ if (MODE === 'CLUSTER') {
     app.get('/logout', (req, res) => {
         req.logOut(err => {
             if (err) {
-                console.log(err);
+                loggerFileError.error(err);
             } else {
                 userGlobalEmail = ''
                 logged = false
@@ -279,5 +277,5 @@ if (MODE === 'CLUSTER') {
         res.sendStatus(404)
     })
 
-    httpServer.listen(PORT, console.log("server ok en puerto " + PORT + ', PID Worker: ' + process.pid))
+    httpServer.listen(PORT, loggerConsole.info("server ok en puerto " + PORT + ', PID Worker: ' + process.pid))
 } 
