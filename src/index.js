@@ -8,11 +8,31 @@ import db from "./firebaseConfig.js"
 import session from 'express-session'
 import { fileURLToPath } from 'url';
 import { dirname } from "path"
+import { Server as IoServer } from 'socket.io'
+import { Server as HTTPServer } from 'http'
+import os from 'os'
+import log4js from 'log4js'
 
+log4js.configure({
+    appenders: {
+        consoleLog: { type: "console" },
+    },
+    categories: {
+        default: { appenders: ['consoleLog'], level: 'trace' },
+    }
+})
+
+let log = log4js.getLogger()
 const __dirname = dirname(fileURLToPath(import.meta.url));
+
 const app = express()
+const httpServer = new HTTPServer(app)
+const io = new IoServer(httpServer)
+
 const PORT = process.env.PORT | 8081
 let nombreQuery = 'documento3'
+
+let carrito = []
 
 const getData = async () => {
     const res = await fetch('https://fakestoreapi.com/products')
@@ -20,6 +40,20 @@ const getData = async () => {
 }
 
 let Productos = await getData()
+
+// io.on("connection", async socket => {
+//     socket.on("newProd", (data) => {
+//         carrito.push(Productos[parseInt(data)-1])
+//         log.info(carrito)
+//     })
+// })
+
+io.on("connection", async socket => {
+    socket.on("newProd", async (data) => {
+        const docArray = await (await db.collection('users').doc('pepe@gmail.com').get('carrito')).data().carrito
+        await db.collection('users').doc('pepe@gmail.com').update({ carrito: [...docArray, Productos[parseInt(data)-1]] })
+    })
+})
 
 const snapshot = await db.collection('users').get();
 
@@ -137,7 +171,7 @@ app.post('/formRegister', async (req, res) => {
     if (existeUsuario) {
         res.redirect('/registerError')
     } else {
-        const newUsuario = { email: emailUser, password: encriptedPassword, nombre: nombreUser, direccion: direccionUser, edad: edadUser, telefono: `+${prefijoTelefonoUser} ${telefonoUser}`, avatar: avatarUser }
+        const newUsuario = { email: emailUser, password: encriptedPassword, nombre: nombreUser, direccion: direccionUser, edad: edadUser, telefono: `+${prefijoTelefonoUser} ${telefonoUser}`, avatar: avatarUser, carrito: [] }
         nombreQuery = emailUser;
         const docRef = db.collection('users').doc(nombreQuery);
         nombreQuery = '';
@@ -164,6 +198,6 @@ app.get('/logout', (req, res) => {
     });
 })
 
-app.listen(PORT, () => {
+httpServer.listen(PORT, () => {
     console.log(`server ok en ${PORT}`)
 })
