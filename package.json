@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "artillery": "^2.0.0-30",
     "bcrypt": "^5.1.0",
     "cluster": "^0.7.7",
     "dotenv": "^16.0.3",
@@ -21,6 +22,7 @@
     "express-session": "^1.17.3",
     "firebase-admin": "^11.5.0",
     "log4js": "^6.9.1",
+    "minimist": "^1.2.8",
     "nodemon": "2.0.21",
     "passport": "^0.6.0",
     "passport-local": "^1.0.0",

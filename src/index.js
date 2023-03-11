@@ -11,18 +11,27 @@ import { dirname } from "path"
 import { Server as IoServer } from 'socket.io'
 import { Server as HTTPServer } from 'http'
 import os from 'os'
+import cluster from 'cluster'
 import log4js from 'log4js'
+import minimist from "minimist"
+
+const MODE = minimist(process.argv)._[3] || 'FORK'
+const nucleos = os.cpus().length
 
 log4js.configure({
     appenders: {
         consoleLog: { type: "console" },
+        fileLog: { type: 'file', filename: 'error.log' },
     },
     categories: {
-        default: { appenders: ['consoleLog'], level: 'trace' },
+        default: { appenders: ['consoleLog'], level: 'debug' },
+        fileErrorConsole: { appenders: ['fileLog', 'consoleLog'], level: 'warn' },
     }
 })
 
 let log = log4js.getLogger()
+let errorLog = log4js.getLogger('fileErrorConsole')
+
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const app = express()
@@ -30,9 +39,7 @@ const httpServer = new HTTPServer(app)
 const io = new IoServer(httpServer)
 
 const PORT = process.env.PORT | 8081
-let nombreQuery = 'documento3'
-
-let carrito = []
+let nombreQuery = ''
 
 const getData = async () => {
     const res = await fetch('https://fakestoreapi.com/products')
@@ -41,17 +48,11 @@ const getData = async () => {
 
 let Productos = await getData()
 
-// io.on("connection", async socket => {
-//     socket.on("newProd", (data) => {
-//         carrito.push(Productos[parseInt(data)-1])
-//         log.info(carrito)
-//     })
-// })
-
 io.on("connection", async socket => {
+    if (!userGlobalEmail) return
     socket.on("newProd", async (data) => {
-        const docArray = await (await db.collection('users').doc('pepe@gmail.com').get('carrito')).data().carrito
-        await db.collection('users').doc('pepe@gmail.com').update({ carrito: [...docArray, Productos[parseInt(data)-1]] })
+        const docArray = await (await db.collection('users').doc(userGlobalEmail).get('carrito')).data().carrito
+        await db.collection('users').doc(userGlobalEmail).update({ carrito: [...docArray, Productos[parseInt(data) - 1]] })
     })
 })
 
@@ -90,17 +91,18 @@ passport.use(new LocalStrategy(
             }
         });
         if (!usuarioConHash) {
-            console.log('usuario no existe');
+            errorLog.warn('usuario no existe');
             return done(null, false);
         } else {
-            console.log('usuario existe');
+            log.debug('usuario existe');
             const match = await verifyPass(pwdFlat, usuarioConHash.password)
-            console.log(match);
+            log.debug(match);
             if (!match) {
-                console.log('no match');
+                errorLog.error('no match');
                 return done(null, false)
             }
             userGlobalEmail = usuarioConHash.email
+            logged = true
             return done(null, usuarioConHash);
         }
     }
@@ -136,12 +138,20 @@ app.set('view engine', 'ejs')
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 
-// app.get('/', isAuth, (req, res) => {
-//     res.render("inicio.ejs", { email: userGlobalEmail, logged: logged })
-// })
+// if (MODE === 'CLUSTER') {
+//     if (cluster.isPrimary) {
 
-app.get('/', (req, res) => {
-    res.render("inicio.ejs", { email: userGlobalEmail, logged: logged, productos: Productos })
+//         loggerConsole.info(`master is running in ${process.pid} en ${procesadores} procesadores`);
+
+//         for (let i = 0; i < procesadores; i++) {
+//             cluster.fork()
+//         }
+//     }
+// }
+
+app.get('/', isAuth, async (req, res) => {
+    const docArray = await (await db.collection('users').doc(userGlobalEmail).get('carrito')).data().carrito
+    res.render("inicio.ejs", { email: userGlobalEmail, logged: logged, productos: Productos, carrito: docArray })
 })
 
 app.get('/register', (req, res) => {
@@ -178,7 +188,7 @@ app.post('/formRegister', async (req, res) => {
         try {
             await docRef.set(newUsuario);
         } catch (error) {
-            if (error) { console.log(error); }
+            if (error) { log.debug(error); }
         }
         res.redirect('/login')
     }
@@ -189,7 +199,7 @@ app.post('/formLogin', passport.authenticate('local', { successRedirect: '/', fa
 app.get('/logout', (req, res) => {
     req.logOut(err => {
         if (err) {
-            console.log(err);
+            errorLog.error(err);
         } else {
             userGlobalEmail = ''
             logged = false
@@ -199,5 +209,5 @@ app.get('/logout', (req, res) => {
 })
 
 httpServer.listen(PORT, () => {
-    console.log(`server ok en ${PORT}`)
+    log.info(`server ok en ${PORT}`)
 })

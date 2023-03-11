@@ -15,14 +15,40 @@
   <header>
     <nav class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/">Inicio</a>
+        <a class="navbar-brand" href="/"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="m-3 mt-0 mb-0">
           <% if(logged){ %>
-            <a class='btn btn-outline-success' href="/logout">Logout</a>
+            <div class="d-flex">
+              <a class='btn btn-outline-success mx-2' href="/logout">Logout</a>
+              <button onclick="handleCartDisplay()" class='btn btn-outline-success mx-2'>Carrito</button>
+            </div>
+            <div>
+              <div id="cart" class="d-none" style="background-color: pink; padding: 2rem; margin: 1rem 0rem;">
+                <h1 class="text-center">Carrito</h1>
+                <% carrito.forEach((i)=> { %>
+                  <div class="card d-flex" style="width: fit-content;">
+                    <div class="card-body d-flex">
+                      <img style="width: 150px;" src=<%=i.image %> class="card-img-top m-2" alt="...">
+                      <div>
+                        <h5 class="card-title">
+                          <%= i.title %>
+                        </h5>
+                        <p class="card-text">
+                          <%= i.description %>
+                        </p>
+                        <p class="card-text">
+                          <%= i.price %>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <% }); %>
+              </div>
+            </div>
             <% } else{ %>
               <a class='btn btn-outline-success' href="/login">Login</a>
               <a class='btn btn-outline-success' href="/register">Registrar</a>
@@ -34,10 +60,8 @@
   </header>
 
   <main class="m-2">
-    <h1 class="text-center m-4">inicio</h1>
-    <h2 class="text-center">
-      <%= email %>
-    </h2>
+    <h1 class="text-center m-4">Bienvenido <%= email %></h1>
+
     <div id="productos" class="d-flex justify-content-center flex-wrap gap-4">
 
       <% productos.forEach((i)=> { %>
@@ -57,7 +81,6 @@
           </div>
         </div>
         <% }); %>
-
     </div>
   </main>
 

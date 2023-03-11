@@ -3,6 +3,13 @@ const socket = io.connect()
 const asd = (prod) => {
     socket.emit("newProd", prod)
 }
-//que lleve el coso por socket y podemos hacer carrito.push(productos[id+1])
 
+function handleCartDisplay() {
+    const cart = document.getElementById('cart')
 
+    if (cart.className === 'd-none') {
+        cart.className = 'd-block'
+    } else {
+        cart.className = 'd-none'
+    }
+}
