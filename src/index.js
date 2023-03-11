@@ -8,12 +8,18 @@ import db from "./firebaseConfig.js"
 import session from 'express-session'
 import { fileURLToPath } from 'url';
 import { dirname } from "path"
-import { match } from "assert"
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express()
-const PORT = process.env.PORT
+const PORT = process.env.PORT | 8081
 let nombreQuery = 'documento3'
+
+const getData = async () => {
+    const res = await fetch('https://fakestoreapi.com/products')
+    return res.json()
+}
+
+let Productos = await getData()
 
 const snapshot = await db.collection('users').get();
 
@@ -50,12 +56,14 @@ passport.use(new LocalStrategy(
             }
         });
         if (!usuarioConHash) {
+            console.log('usuario no existe');
             return done(null, false);
         } else {
-            //ACA ESA EL ERROR______________________________________________________________________________
+            console.log('usuario existe');
             const match = await verifyPass(pwdFlat, usuarioConHash.password)
             console.log(match);
             if (!match) {
+                console.log('no match');
                 return done(null, false)
             }
             userGlobalEmail = usuarioConHash.email
@@ -94,8 +102,12 @@ app.set('view engine', 'ejs')
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 
-app.get('/', isAuth, (req, res) => {
-    res.render("inicio.ejs", { email: userGlobalEmail, logged: logged })
+// app.get('/', isAuth, (req, res) => {
+//     res.render("inicio.ejs", { email: userGlobalEmail, logged: logged })
+// })
+
+app.get('/', (req, res) => {
+    res.render("inicio.ejs", { email: userGlobalEmail, logged: logged, productos: Productos })
 })
 
 app.get('/register', (req, res) => {
@@ -115,7 +127,7 @@ app.get('/login', (req, res) => {
 })
 
 app.post('/formRegister', async (req, res) => {
-    const { emailUser, passwordUser } = req.body
+    const { emailUser, passwordUser, nombreUser, direccionUser, edadUser, telefonoUser, avatarUser, prefijoTelefonoUser } = req.body
     const encriptedPassword = await generateHash(passwordUser)
     const existeUsuario = snapshot.forEach((i) => {
         if (i.data().email === emailUser) {
@@ -125,7 +137,7 @@ app.post('/formRegister', async (req, res) => {
     if (existeUsuario) {
         res.redirect('/registerError')
     } else {
-        const newUsuario = { email: emailUser, password: encriptedPassword }
+        const newUsuario = { email: emailUser, password: encriptedPassword, nombre: nombreUser, direccion: direccionUser, edad: edadUser, telefono: `+${prefijoTelefonoUser} ${telefonoUser}`, avatar: avatarUser }
         nombreQuery = emailUser;
         const docRef = db.collection('users').doc(nombreQuery);
         nombreQuery = '';
