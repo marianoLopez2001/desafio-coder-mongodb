@@ -1,7 +1,11 @@
 const socket = io.connect()
 
-const asd = (prod) => {
+const newProd = (prod) => {
     socket.emit("newProd", prod)
+}
+
+const finalizarCompra = () => {
+    socket.emit("finalizarCompra")
 }
 
 function handleCartDisplay() {
