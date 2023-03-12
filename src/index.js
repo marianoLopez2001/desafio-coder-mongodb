@@ -14,6 +14,7 @@ import os from 'os'
 import cluster from 'cluster'
 import log4js from 'log4js'
 import minimist from "minimist"
+import { createTransport } from "nodemailer"
 
 const MODE = minimist(process.argv)._[3] || 'FORK'
 const nucleos = os.cpus().length
@@ -31,6 +32,18 @@ log4js.configure({
 
 let log = log4js.getLogger()
 let errorLog = log4js.getLogger('fileErrorConsole')
+
+const nodemailerUser = process.env.NODEMAILER_USER
+const nodemailerPass = process.env.NODEMAILER_PASS
+
+const transporter = createTransport({
+    service: 'gmail',
+    port: 587,
+    auth: {
+        user: nodemailerUser,
+        pass: nodemailerPass
+    }
+});
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -152,7 +165,7 @@ app.use(express.urlencoded({ extended: true }));
 app.get('/', isAuth, async (req, res) => { //ACA HAY QUE BUSCAR Y MOSTRAR LA INFO
     const docArray = (await db.collection('users').doc(userGlobalEmail).get('carrito')).data().carrito
     const userInfo = (await db.collection('users').doc(userGlobalEmail).get()).data()
-    res.render("inicio.ejs", { email: userGlobalEmail, logged: logged, productos: Productos, carrito: docArray, user: userInfo})
+    res.render("inicio.ejs", { email: userGlobalEmail, logged: logged, productos: Productos, carrito: docArray, user: userInfo })
 })
 
 app.get('/register', (req, res) => {
@@ -188,6 +201,17 @@ app.post('/formRegister', async (req, res) => {
         nombreQuery = '';
         try {
             await docRef.set(newUsuario);
+            const mailOptions = {
+                from: 'Nuevo registro', 
+                to: nodemailerUser,
+                subject: JSON.stringify(newUsuario),
+            }
+            try {
+                const msg = await transporter.sendMail(mailOptions)
+                log.info(msg)
+            } catch (error) {
+                errorLog.error(error)
+            }
         } catch (error) {
             if (error) { log.debug(error); }
         }
