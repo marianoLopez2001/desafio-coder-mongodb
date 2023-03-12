@@ -33,16 +33,16 @@
   <main class="m-2 ">
       <form class="m-3 d-flex flex-column gap-2 p-4 border" style="width: fit-content;" action="/formRegister" method="POST">
         <h2>Formulario de registro</h2>
-        Email: <input name="emailUser" type="email">
-        Password: <input name="passwordUser" type="password">
-        Nombre: <input name="nombreUser" type="text">
-        Direccion: <input name="direccionUser" type="text">
-        Edad: <input name="edadUser" type="number">
+        Email: <input name="emailUser" type="email" required>
+        Password: <input name="passwordUser" type="password" required>
+        Nombre: <input name="nombreUser" type="text" required>
+        Direccion: <input name="direccionUser" type="text" required>
+        Edad: <input name="edadUser" type="number" required>
         <div class="d-flex">
-          Prefijo: <input class="mx-3" name="prefijoTelefonoUser" maxlength="3" type="number">
-          Telefono: <input class="ms-3" name="telefonoUser" type="tel">
+          Prefijo: <input class="mx-3" name="prefijoTelefonoUser" maxlength="3" type="number" required>
+          Telefono: <input class="ms-3" name="telefonoUser" type="tel" required>
         </div>
-        Avatar: <input name="avatarUser" type="text">
+        Avatar: <input name="avatarUser" type="text" required>
         <input class="btn btn-primary mt-3" type="submit" value="enviar">
       </form>
   </main>

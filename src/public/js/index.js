@@ -13,3 +13,13 @@ function handleCartDisplay() {
         cart.className = 'd-none'
     }
 }
+
+function handleProfileDisplay() {
+    const perfil = document.getElementById('profile')
+
+    if (perfil.className === 'd-none') {
+        perfil.className = 'd-block'
+    } else {
+        perfil.className = 'd-none'
+    }
+}

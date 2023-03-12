@@ -149,9 +149,10 @@ app.use(express.urlencoded({ extended: true }));
 //     }
 // }
 
-app.get('/', isAuth, async (req, res) => {
-    const docArray = await (await db.collection('users').doc(userGlobalEmail).get('carrito')).data().carrito
-    res.render("inicio.ejs", { email: userGlobalEmail, logged: logged, productos: Productos, carrito: docArray })
+app.get('/', isAuth, async (req, res) => { //ACA HAY QUE BUSCAR Y MOSTRAR LA INFO
+    const docArray = (await db.collection('users').doc(userGlobalEmail).get('carrito')).data().carrito
+    const userInfo = (await db.collection('users').doc(userGlobalEmail).get()).data()
+    res.render("inicio.ejs", { email: userGlobalEmail, logged: logged, productos: Productos, carrito: docArray, user: userInfo})
 })
 
 app.get('/register', (req, res) => {

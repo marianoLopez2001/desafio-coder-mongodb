@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <header>
+  <header style="max-height: 2px; z-index: 5; position: relative; margin-bottom: 6rem;">
     <nav class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="/"></a>
@@ -25,9 +25,30 @@
             <div class="d-flex">
               <a class='btn btn-outline-success mx-2' href="/logout">Logout</a>
               <button onclick="handleCartDisplay()" class='btn btn-outline-success mx-2'>Carrito</button>
+              <button onclick="handleProfileDisplay()" class='btn btn-outline-success mx-2'>Perfil<img
+                  style="width: 30px;" src=<%=user.avatar %> class="card-img-top m-2" alt="..."></button>
+              <div class="d-none" id="profile">
+                <div class="d-flex">
+                  <p class="me-3">
+                    Nombre: <%=user.nombre %>
+                  </p>
+                  <p>
+                    Edad: <%=user.edad %>
+                  </p>
+                </div>
+                <div class="d-flex">
+                  <p class="me-3">
+                    Direccion: <%=user.direccion %>
+                  </p>
+
+                  <p>
+                    Telefono: <%=user.telefono %>
+                  </p>
+                </div>
+              </div>
             </div>
             <div>
-              <div id="cart" class="d-none" style="background-color: pink; padding: 2rem; margin: 1rem 0rem;">
+              <div id="cart" class="d-none" style="background-color: pink; padding: 2rem; margin: 1rem 0rem; border-bottom: 0.5rem solid rgb(255, 145, 163);">
                 <h1 class="text-center">Carrito</h1>
                 <% carrito.forEach((i)=> { %>
                   <div class="card d-flex" style="width: fit-content;">
@@ -60,7 +81,8 @@
   </header>
 
   <main class="m-2">
-    <h1 class="text-center m-4">Bienvenido <%= email %></h1>
+    <h1 class="text-center m-4">Bienvenido <%= email %>
+    </h1>
 
     <div id="productos" class="d-flex justify-content-center flex-wrap gap-4">
 
