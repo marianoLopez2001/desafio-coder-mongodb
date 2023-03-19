@@ -1,7 +1,5 @@
 const socket = io()
 
-console.log(socket);
-
 const newProd = (prod) => {
     socket.emit("newProd", prod)
 }

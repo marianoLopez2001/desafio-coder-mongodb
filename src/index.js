@@ -1,6 +1,6 @@
 import { PORT } from "./config/config.js"
-import { isAuth, LocalStrategy } from './service/service.js'
-import { db, log, errorLog, snapshot } from './config/config.js'
+import { isAuth } from './service/service.js'
+import { db, log, errorLog, snapshot, nodemailerUser } from './config/config.js'
 import { app } from './router/middlewars.js'
 import passport from "passport"
 import { userGlobalEmail, logged, nombreQuery } from "./service/utils.js"

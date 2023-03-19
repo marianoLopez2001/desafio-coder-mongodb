@@ -4,7 +4,7 @@ import express from 'express'
 import { Server as HTTPServer } from 'http'
 import { Server as IoServer } from 'socket.io'
 import { userGlobalEmail } from '../service/utils.js'
-import {log, errorLog, db, transporter, client} from '../config/config.js'
+import { log, errorLog, db, transporter, client, nodemailerUser } from '../config/config.js'
 import { Productos } from '../index.js'
 
 const app = express()
@@ -15,7 +15,6 @@ const io = new IoServer(httpServer)
 io.on("connection", async socket => {
     log.debug('connect')
     socket.on("newProd", async (data) => {
-        log.debug('new prod added?')
         const docArray = await (await db.collection('users').doc(userGlobalEmail.userGlobalEmail).get('carrito')).data().carrito
         await db.collection('users').doc(userGlobalEmail.userGlobalEmail).update({ carrito: [...docArray, Productos[parseInt(data) - 1]] })
     })
