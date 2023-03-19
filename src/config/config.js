@@ -62,4 +62,4 @@ const db = getFirestore();
 
 const snapshot = await db.collection('users').get();
 
-export { PORT, log, errorLog, transporter, db, client, snapshot}
+export { PORT, log, errorLog, transporter, db, client, snapshot, nodemailerUser}

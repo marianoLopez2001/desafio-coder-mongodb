@@ -5,17 +5,15 @@ import { app } from './router/middlewars.js'
 import passport from "passport"
 import { userGlobalEmail, logged, nombreQuery } from "./service/utils.js"
 import { getData } from "./service/service.js"
+import { httpServer } from "./router/middlewars.js"
 
-const Productos = await getData()
-
-app.listen(PORT, () => {
-    console.log('server ok');
-})
+export const Productos = await getData()
 
 app.get('/', isAuth, async (req, res) => {
     const docArray = (await db.collection('users').doc(userGlobalEmail.userGlobalEmail).get('carrito')).data().carrito
     const userInfo = (await db.collection('users').doc(userGlobalEmail.userGlobalEmail).get()).data()
-    res.render("inicio.ejs", { email: userGlobalEmail, logged: logged, productos: Productos, carrito: docArray, user: userInfo })
+    log.debug(userGlobalEmail.userGlobalEmail)
+    res.render("inicio.ejs", { email: userGlobalEmail.userGlobalEmail, logged: logged.logged, productos: Productos, carrito: docArray, user: userInfo })
 })
 
 app.get('/register', (req, res) => {
@@ -82,5 +80,9 @@ app.get('/logout', (req, res) => {
             res.redirect('/');
         }
     });
+})
+
+httpServer.listen(PORT, () => {
+    console.log('server ok');
 })
 
