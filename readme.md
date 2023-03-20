@@ -4,4 +4,3 @@
 
 ## artillery quick --count 50 -n 20 http://localhost:8081 > result_forkinfo.artillery.txt
 
-funciona desde middlewares, pero no desde socket

@@ -9,7 +9,7 @@ import { Productos } from '../index.js'
 
 const app = express()
 const httpServer = new HTTPServer(app)
-//__________________________________________________________________________________
+
 const io = new IoServer(httpServer)
 
 io.on("connection", async socket => {
@@ -64,10 +64,6 @@ io.on("connection", async socket => {
     })
 })
 
-//__________________________________________________________________________________
-
-console.log('-----------------------------------------------middlewares file');
-
 app.use(session({
     secret: 'secret',
     resave: false,
@@ -79,9 +75,7 @@ app.use(session({
 app.use(Passport.initialize());
 app.use(Passport.session());
 app.use(express.static('F:/Proyectos/desafio-coder-mongodb/src/public'))
-// app.use(express.static(__dirname + '/public'))
 app.set('views', `F:/Proyectos/desafio-coder-mongodb/src/views`)
-// app.set('views', `${__dirname}/views`)
 app.set('view engine', 'ejs')
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));

@@ -3,8 +3,6 @@ import { log, errorLog, snapshot } from '../config/config.js'
 import { LocalStrategy, verifyPass } from '../service/service.js';
 import { userGlobalEmail, logged } from '../service/utils.js';
 
-console.log('-----------------------------------------------passport file');
-
 const Passport = passport
 
 Passport.use(new LocalStrategy(
@@ -26,8 +24,6 @@ Passport.use(new LocalStrategy(
                 errorLog.error('no match');
                 return done(null, false)
             }
-            // userGlobalEmail = usuarioConHash.email
-            // logged = true
             userGlobalEmail.userGlobalEmail = usuarioConHash.email
             logged.logged = true
             return done(null, usuarioConHash);
