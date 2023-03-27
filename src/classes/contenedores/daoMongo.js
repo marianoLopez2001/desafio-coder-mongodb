@@ -13,7 +13,7 @@ class DaoContainerMongo {
         this.model = Users;
     }
 
-    //Metodos
+    //Singleton
 
     static getInstance() {
         try {
@@ -25,6 +25,8 @@ class DaoContainerMongo {
             throw new ErrorClass(500, error)
         }
     }
+
+    //Metodos
 
     async create(data) {
         try {
@@ -74,5 +76,6 @@ class DaoContainerMongo {
 }
 
 const main = DaoContainerMongo.getInstance()
-main.readAll()
+// main.readAll()
+
 

@@ -1,9 +1,6 @@
-# Artillery 
+# Para correr el proyecto es con 1 solo parametro, que sería la eleccion de la db (firebase o mongo):
 
-## artillery quick --count 50 -n 20 http://localhost:8081 > result_clusterinfo.artillery.txt
+# Ejemplo1: npm run start-firebase Firebase 
+# Ejemplo2: npm run start-mongo Mongo 
 
-## artillery quick --count 50 -n 20 http://localhost:8081 > result_forkinfo.artillery.txt
-
-//arreglar minimist
-//eliminar logs
-//mover el model a this.model
+# Los parametros de la DB van con primera letra mayuscula (Mongo | Firebase)

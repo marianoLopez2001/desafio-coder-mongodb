@@ -1,5 +1,5 @@
 import { DB as CLIDaosParam } from '../../config/config.js'
-import { masterFactory } from '../../models/factory/factoryMaster.js';
+import { masterFactory } from '../../models/factoryMaster.js'
 
 const factoryInstance = new masterFactory()
 

@@ -6,8 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./src/index.js",
-    "start-nodemon": "nodemon ./src/index.js"
+    "start-firebase": "node ./src/classes/contenedores/daoFirebase.js",
+    "start-mongo": "node ./src/classes/contenedores/daoMongo.js"
   },
   "keywords": [],
   "author": "",

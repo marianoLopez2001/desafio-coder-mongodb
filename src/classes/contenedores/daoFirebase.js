@@ -1,5 +1,5 @@
 import { instance } from './daos.js';
-import { log, errorLog } from '../../config/config.js'
+import { log } from '../../config/config.js'
 import ErrorClass from '../errorClass.js';
 
 let instanciaSingleton = null
@@ -11,14 +11,16 @@ class DaoContainerFirebase {
         this.model = model;
     }
 
-    //Metodos
-
+    //Singleton
+    
     static getInstance() {
         if (!instanciaSingleton) {
             instanciaSingleton = new DaoContainerFirebase();
         }
         return instanciaSingleton;
     }
+
+    //Metodos Crud
 
     async create(data, id) {
         try {
@@ -74,6 +76,6 @@ class DaoContainerFirebase {
 //aca hay un error, faltaria un await o algo asi para que no haya un timeout
 setTimeout(() => {
     const main = DaoContainerFirebase.getInstance()
-    main.readById('id7')
+    // main.readById('id7')
 }, 1000);
 
