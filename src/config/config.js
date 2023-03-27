@@ -6,7 +6,7 @@ const { Schema } = mongoose;
 
 dotenv.config()
 
-const DB = minimist(process.argv)._[4] || 'Mongo'; //Aca deberia ir "MONGO" o "FIREBASE"
+const DB = minimist(process.argv)._[2] || 'Mongo'; //Aca deberia ir "MONGO" o "FIREBASE"
 
 //LOG4JS CONFIG
 
