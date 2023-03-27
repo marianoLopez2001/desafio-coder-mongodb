@@ -48,10 +48,10 @@ export async function formRegister(req, res) {
                 const msg = await transporter.sendMail(mailOptions)
                 log.info(msg)
             } catch (error) {
-                errorLog.error(error)
+                throw new ErrorClass(500, error)
             }
         } catch (error) {
-            if (error) { log.debug(error); }
+            throw new ErrorClass(500, error)
         }
         res.redirect('/login')
     }
@@ -60,10 +60,11 @@ export async function formRegister(req, res) {
 export function logout(req, res) {
     req.logOut(err => {
         if (err) {
-            errorLog.error(err);
+            throw new ErrorClass(500, error)
         } else {
             userGlobalEmail.userGlobalEmail = ''
             logged.logged = false
             res.redirect('/');
         }
-    });}
+    });
+}

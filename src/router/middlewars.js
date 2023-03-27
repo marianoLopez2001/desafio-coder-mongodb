@@ -35,7 +35,7 @@ io.on("connection", async socket => {
             })
             log.info(msg)
         } catch (error) {
-            errorLog.error(error)
+            throw new ErrorClass(500, error)
         }
 
         //WHATSAPP
@@ -47,7 +47,7 @@ io.on("connection", async socket => {
                 to: 'whatsapp:+5491141642367'
             })
         } catch (error) {
-            errorLog.error(error)
+            throw new ErrorClass(500, error)
         }
 
         //SMS
@@ -59,7 +59,7 @@ io.on("connection", async socket => {
                 to: '+541141642367'
             })
         } catch (error) {
-            errorLog.error(error)
+            throw new ErrorClass(500, error)
         }
     })
 })
