@@ -1,19 +1,14 @@
-import { log, errorLog } from '../../config/config.js'
-import FirebaseClient from '../firebaseClient.js'
 import { instance } from './daos.js';
+import {log, errorLog} from '../../config/config.js'
 
-export default class DaoContainerFirebase {
+class DaoContainerFirebase {
+
     constructor(model) {
-        this.connection = new FirebaseClient();
+        this.connection = instance; //ya conectado
         this.model = model;
     }
 
     //Metodos
-
-    connect() {
-        const db = this.connection.connect()
-        return db
-    }
 
     async create(data) {
         try {
@@ -35,13 +30,13 @@ export default class DaoContainerFirebase {
 
     async readById(id) {
         try {
-            const snapshot = await connected.collection('users').get(id);
+            const snapshot = await this.connection.collection('users').get(id);
             const data = snapshot.docs.find(doc => doc.id === id);
             if (!data) {
                 errorLog.error('No hubo coincidencias')
                 return
             }
-            console.log(JSON.stringify(data.data()));
+            log.info(JSON.stringify(data.data())); //esto se cambia a return mas tarde
         } catch (error) {
             errorLog.error(error);
         }
@@ -65,10 +60,10 @@ export default class DaoContainerFirebase {
     }
 }
 
-// const instance = new DaoContainer()
-// const connected = instance.connect()
-// instance.readById('asd@gmail.com')
-// // getAll ejemplo
-// // let x = await instance.readAll(connected)
-// // console.log(x);
+
+//aca hay un error, faltaria un await o algo asi para que no haya un timeout
+setTimeout(() => {
+    const main = new DaoContainerFirebase()
+    main.readById('asd@gmail.com')
+}, 1000);
 

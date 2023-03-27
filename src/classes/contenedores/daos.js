@@ -1,12 +1,14 @@
 import { DB } from '../../config/config.js'
-import DaoContainerFirebase from './daoFirebase.js'
 
 let instance
 
 if (DB === 'FIREBASE') {
-    instance = new DaoContainerFirebase()
+    import('../firebaseClient.js')
+        .then((modulo) => {
+            instance = new modulo.default().connect();
+        })
 } else if (DB === 'MONGO') {
     // instance = new DaoContainerMongo()
 }
 
-export { instance }
+export {instance}
