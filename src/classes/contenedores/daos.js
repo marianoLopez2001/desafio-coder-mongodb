@@ -5,6 +5,8 @@ const factoryInstance = new masterFactory()
 
 const DBChoice = factoryInstance.create(CLIDaosParam)
 
+console.log(DBChoice.type);
+
 let instance
 
 if (DBChoice.type === 'Firebase') {
@@ -13,8 +15,10 @@ if (DBChoice.type === 'Firebase') {
             instance = new modulo.default().connect();
         })
 } else if (DBChoice.type === 'Mongo') {
-    // instance = new DaoContainerMongo()
-}
+    import('../mongoClient.js')
+        .then((modulo) => {
+            instance = new modulo.default().connect();
+        })}
 
 export { instance }
 

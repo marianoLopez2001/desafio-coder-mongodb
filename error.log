@@ -1,0 +1,5 @@
+[2023-03-27T00:06:08.302] [WARN] fileErrorConsole - usuario no existe
+[2023-03-27T11:14:09.452] [ERROR] fileErrorConsole - TypeError: Cannot read properties of undefined (reading 'collection')
+    at DaoContainer.readById (file:///F:/Proyectos/desafio-coder-mongodb/src/classes/daoFirebase.js:41:46)
+    at file:///F:/Proyectos/desafio-coder-mongodb/src/classes/daoFirebase.js:69:10
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
