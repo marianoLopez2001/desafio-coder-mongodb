@@ -1,8 +1,3 @@
-import { log, db, transporter, snapshot } from '../config/config.js'
-import { userGlobalEmail, logged, nombreQuery } from '../service/utils.js'
-import { Productos } from '../index.js'
-import { generateHash } from '../service/service.js'
-
 export async function getInicio(req, res) {
     const docArray = (await db.collection('users').doc(userGlobalEmail.userGlobalEmail).get('carrito')).data().carrito
     const userInfo = (await db.collection('users').doc(userGlobalEmail.userGlobalEmail).get()).data()
