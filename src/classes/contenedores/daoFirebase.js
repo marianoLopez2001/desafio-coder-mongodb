@@ -1,6 +1,8 @@
 import { instance } from './daos.js';
 import {log, errorLog} from '../../config/config.js'
 
+let instanciaSingleton = null
+
 class DaoContainerFirebase {
 
     constructor(model) {
@@ -10,17 +12,27 @@ class DaoContainerFirebase {
 
     //Metodos
 
-    async create(data) {
+    static getInstance() {
+        if (!instanciaSingleton) {
+            instanciaSingleton = new DaoContainerFirebase();
+        }
+        // let instance;
+        // instance = new SingletonClass();
+        return instanciaSingleton;
+      }
+
+    async create(data, id) {
         try {
-            await connected.collection('users').doc('id').set(data);
+            await this.connection.collection('users').doc(id).set(data);
+            console.log('creado');
         } catch (error) {
             errorLog.error(error);
         }
     }
 
-    async readAll(connected) { //necesita que le pases la conex de arriba ^
+    async readAll() { //necesita que le pases la conex de arriba ^
         try {
-            const snapshot = await connected.collection('users').get();
+            const snapshot = await this.connection.collection('users').get();
             const data = snapshot.docs.map(doc => doc.data());
             return JSON.stringify(data);
         } catch (error) {
@@ -44,7 +56,7 @@ class DaoContainerFirebase {
 
     async update(id, data) {
         try {
-            const ref = await connected.collection('users').doc(id);
+            const ref = await this.connection.collection('users').doc(id);
             await ref.update(data)
         } catch (error) {
             errorLog.error(error);
@@ -53,17 +65,16 @@ class DaoContainerFirebase {
 
     async deleteById(id) {
         try {
-            await connected.collection('users').doc(id).delete()
+            await this.connection.collection('users').doc(id).delete()
         } catch (error) {
             errorLog.error(error);
         }
     }
 }
 
-
 //aca hay un error, faltaria un await o algo asi para que no haya un timeout
 setTimeout(() => {
-    const main = new DaoContainerFirebase()
-    main.readById('asd@gmail.com')
+    const main = DaoContainerFirebase.getInstance()
+    main.create({name:'jorge', lastname:'asd', mail: 'asd@gmail.com'}, 'id5')
 }, 1000);
 
